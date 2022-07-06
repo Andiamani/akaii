@@ -1,19 +1,15 @@
-orbs:
+version: 2.1
 
-  docker: circleci/docker@1.7.0
+jobs:
 
-workflows:
+  build:
 
-    example-workflow:
+    docker:
 
-      jobs:
+      - image: ubuntu:14.04
 
-        - docker/publish:
+        auth:
 
-            docker-password: aricrew123 
+          username: aricrew
 
-            docker-username: aricrew 
-
-            image: ari 
-
-            use-remote-docker: true 
+          password: aricrew123
